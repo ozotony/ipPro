@@ -1,0 +1,161 @@
+<ion-view >
+
+    
+
+
+ 
+<ion-header class="bar bar-assertive ">
+     <button class="button button-small " ng-click="dashboard()" >
+       <i class="ion-arrow-left-a"></i>
+          Back
+        </button>
+        <span style="margin-left: auto;
+    margin-right: auto;">
+    --- TRADEMARK ["Un-used Items"] ---
+        </span>
+    </ion-header>
+
+  
+  
+  <ion-content  class="padding"> 
+      
+    
+
+
+
+ 
+
+    <div class="table-responsive ">     
+ 
+  <ion-scroll zooming="true" direction="y" delegate-handle="main-list" >
+      <table st-table="displayedCollection" st-safe-src="ListAgent" style="margin-left: auto;
+    margin-right: auto;"  style="width:100%;"   >
+ <thead>
+                            <tr bgcolor="#E3EAEB" class="row">
+                                
+                              
+                             
+
+                            <tr class="row">
+                                <th colspan="4" class="col"><input st-search="" class="form-control" placeholder="global search ..." type="text" /></th>
+                            </tr>
+
+                            </tr>
+ </thead>
+
+               
+
+                        <tbody>
+                            <tr ng-repeat="row in displayedCollection"  >
+<td>
+     <div class="table-responsive">
+                          <table class="center-align padding" >
+                              <tr > 
+                               <td > <strong> SN  </strong></td>
+                                 <td > {{row.sn}} </td>
+                                 <td > </td>
+                                <td > </td>
+                                  </tr>
+
+                                  <tr > 
+                               <td > <strong> CODE</strong></td>
+                                 <td > {{row.item_code}} </td>
+                                 <td >  </td>
+                                <td >  </td>
+                                  </tr>
+ <tr > 
+                               <td > <strong> APPLICANT </strong> </td>
+                                 <td > {{row.xname}} </td>
+                                 <td >   </td>
+                                <td >  </td>
+                                  </tr>
+
+                                  <tr > 
+                               <td > <strong>TRANSACTION ID </strong> </td>
+                                 <td  colspan="3"> {{row.new_transID}} </td>
+                                
+                                  </tr>
+
+                                   <tr > 
+                               <td > <strong> PRODUCT TITLE </strong> </td>
+                                 <td  colspan="3"> <input type="text" class="form-control input-sm" placeholder="Prod Title" ng-model="row.product_title"> </td>
+                                 
+                                  </tr>
+
+                                    <tr > 
+                               <td > <strong> AMT </strong> </td>
+                                 <td > {{row.init_amt|currency:""}} </td>
+                                 <td >   </td>
+                                <td > </td>
+                                  </tr>
+
+                                  <tr > 
+                               <td > </td>
+                                 <td > <input id="Button1" type="button" class="btn btn-info button-small"  ng-click="EditRow(row)" value="Proceed" />  </td>
+                                 <td  colspan="2">   </td>
+                              
+                                  </tr>
+
+
+                          </table>
+                          </div>
+
+</td>
+
+                               
+
+
+                              
+
+
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr >
+                                <td  colspan="4" class="text-center col">
+                                    <div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="4"></div>
+
+
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+
+                    <table >
+
+
+                        <tr>
+                            <td align="center">
+
+                                <input id="Button1" type="button" class="btn btn-info" ng-click="dashboard()" value="Back" />
+
+                              
+
+
+
+
+                            </td>
+                        </tr>
+                    </table>
+
+
+</ion-scroll>
+
+
+</div>
+
+
+
+    
+              
+  
+      
+          </ion-content> 
+
+
+               </ion-view >
+
+
+
+     

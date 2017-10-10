@@ -1,0 +1,184 @@
+﻿
+
+
+<ion-view hide-back-button="true" style="background-color:#3D3D3D" >
+   
+  <ion-content style="background-color:#3D3D3D" class="has-header" >
+
+    <style>
+
+      .dd8{
+               color: white;
+               background-color: #3D3D3D;
+               margin-bottom:0px;
+               padding-bottom:0px;
+              
+           }
+
+           .center {
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+
+
+      .vAccordion--default2 v-pane.is-expanded>v-pane-header {
+      
+    background-color :#06FBB5;
+    color: black;
+    height :55px;
+}
+
+  .vAccordion--default3 v-pane.is-expanded>v-pane-header {
+     padding-top :20px;
+      
+}
+
+ .vAccordion--default2 v-pane-header {
+  
+    border-bottom: 1px solid white;
+    color:white;
+  background-color :#05BC88;
+    height :55px;
+  
+}
+
+  .icon2 {color:black !important;padding-left:10px }
+
+  .custom-icon {
+  font-size: 64px;
+  color : red;
+}
+   
+    
+
+ .bar.bar-assertive {
+    border-color: #3D3D3D;
+    background-color: #3D3D3D;
+    background-image: linear-gradient(0deg, #3D3D3D, #3D3D3D 50%, transparent 50%);
+    color: #fff;
+}
+a:hover { text-decoration: none; }
+
+
+      </style>
+  
+<div class="col-md-12" style="background-color:#3D3D3D"> 
+
+
+
+
+            <div ng-show=!islogin > 
+<br/>
+<br/>
+
+
+  
+                             <ks-swiper-container initial-slide="3" loop="true" autoplay="6000" show-nav-buttons="true" slides-per-view="1" space-between="5" pagination-clickable="true " >
+    <ks-swiper-slide class="swiper-slide" ng-repeat="s in myImages" >
+        <img ng-src="{{s}}" width="100%" >
+    </ks-swiper-slide>
+
+  
+</ks-swiper-container>
+
+               
+                    <div class="row " style="margin-left: auto;
+    margin-right: auto;">
+                        <div style="margin-left: auto;
+    margin-right: auto;" "  >
+                         <br/>
+                           <br/>
+                             <br/>
+                               <br/>
+                                 <br/>
+                                   
+                        
+
+                           
+                        </div>
+                       
+                       
+
+                    </div>
+
+                      <div class="row ">
+                         <br/>
+
+                      </div>
+
+
+
+             
+
+                     <a  ng-show=!islogin   ui-sref="app.login" > <button  ion-button large  class="button center " style="  background-color: #06FBB5;color:black">
+  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Login &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</button></a>
+
+ 
+
+                   
+
+<br/>
+                                       <br/>
+                                         <br/>
+
+              
+            </div>
+
+            <div  ng-show=islogin  class="padding " >
+
+<div    class="padding " >
+
+     <v-accordion class="vAccordion--default2"    >
+
+        <v-pane   ng-repeat="row in displayedCollection" expanded="pane.isExpanded" >
+           
+                <v-pane-header   ng-class="{'pending-delete': add5(row)}" style="margin-bottom:0px;padding-bottom:0px;padding-top:0px;">
+                   <div class="row"> 
+     <span class="col col-10" ng-click="$row.toggle()"><i class = "icon ion-arrow-down-b icon2" ></i>  </span>       <span class = "col col-50"  change-background3> {{row.Subject}} </span>  <span class = "col col-40">{{row.Sent_Date }}     </span>
+</div>
+</v-pane-header>
+                
+                <v-pane-content style="height:200px;padding-top:3px;padding-left:7px;background-color:white">
+
+                    <span   style="padding-top:40px" ng-bind-html="row.Message"></span>
+
+
+
+                    <!-- accordions can be nested :) -->
+
+                </v-pane-content>
+</v-pane>
+
+    </v-accordion>
+
+
+    <br/>
+
+     <br/>
+
+      <br/>
+
+       <br/>
+
+
+    
+
+</div>
+
+
+
+  
+               
+            </div>
+
+         
+
+</div>
+
+  </ion-content>
+</ion-view>
+
+

@@ -1,0 +1,49 @@
+<ion-view >
+    <ion-header  class="bar bar-assertive bar-subheader title" align-title="center"  >
+         <button class="button button-small " ng-click="dashboard()" >
+       <i class="ion-arrow-left-a"></i>
+          Back
+        </button>
+        
+        <span style="margin-left: auto;
+    margin-right: auto;" >ITEM SECTION </span> </ion-header>
+  <ion-content class="has-subheader"> 
+
+<table class="table" >
+       
+        <tr >
+            <td class="center-align">
+                <a href="#/app/ViewBasketTm">
+                    <img alt="" src="Images/TRADEMARKS.png" style="width: 100px; " /></a></td>
+            <td class="center-align">
+                <a href="#/app/ViewBasketPt">
+                    <img alt="" src="Images/patent.png" style="width: 100px" /></a></td>
+            <td class="center-align">
+                <a href="#/app/ViewBasketDs">
+                    <img alt="" src="Images/DESIGNS.png" style="width: 100px" /></a></td>
+        </tr>
+       
+        <tr >
+            <td class="center-align">
+            <strong> <span class="badge badge-assertive icon-badge">{{dd.trademarkcount}} </span Item(s) </strong>
+            <br />
+                 <a href="#/app/ViewBasketTm">TRADEMARKS</a></td>
+            <td class="center-align">
+            <strong><span class="badge badge-assertive icon-badge">{{dd.patentcount}} </span Item(s)</strong>
+            <br />
+                 <a href="#/app/ViewBasketPt">PATENT</a></td>
+           <td class="center-align">
+            <strong><span class="badge badge-assertive icon-badge">{{dd.designcount}} </span Item(s)</strong>
+            <br />
+             <a href="#/app/ViewBasketDs">DESIGN</a></td>
+        </tr>
+       
+        <tr class="center-align" >
+            <td class="center-align" colspan="3"></td>
+        </tr>   
+        
+          </table>
+
+          </ion-content> 
+          </ion-view >
+  

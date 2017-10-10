@@ -1,0 +1,234 @@
+
+
+
+<ion-view >
+  <ion-header class="bar bar-assertive bar-subheader">
+
+      <button class="button button-small " ng-click="dashboard()" >
+       <i class="ion-arrow-left-a"></i>
+          Back
+        </button>
+
+<h1 class="title"><span style="margin-left: auto;
+    margin-right: auto;" >PAYMENT STATUS</span> </h1>
+
+  </ion-header>
+  <ion-content class="has-subheader" >
+ <div class="table-responsive "> 
+      <table class="table" >
+   
+      
+          
+              <tr >
+                 
+            <td >
+           
+                <input type="text" id="SelectedValue" required  name="txt_status" placeholder="Enter Transaction Id" ng-model="aa.SelectedValue">
+
+                       
+               
+            </td>
+        </tr>
+               <tr>
+           <td class="center-align" style="background-color:#1C5E55; color:#ffffff;">
+           </td>
+         </tr>
+          <tr >
+            <td >  
+                 <button class="button button-calm " ng-click="Ddx3()" >
+       <i class="ion-trash-b"></i>
+          Clear
+        </button>
+
+         
+                 <button  class="button button-calm " ng-click="Ddx(aa.SelectedValue)" >
+       <i class="ion-search"></i>
+          Search
+        </button>
+
+               
+             
+   
+                         
+            </td>
+        </tr>
+
+      </table>
+ </div>
+    <div class="table-responsive ">
+    <table  id="registration_form" ng-show=vshow class="center-align padding table-responsive"  style="font-size:16px;text-align:center;font-weight:normal;width:100%;border:1px solid #000000;"  >           
+            
+         
+        
+         <tr class="row" style="background-color:#1C5E55; color:#ffffff; font-weight:bold;border:1px solid #000000;">
+            <td class="col" colspan="4">
+                INVOICE/RECIEPT FOR TRANSACTION :
+                <br/>
+                &nbsp; {{dd.twallet.ref_no}} </td>
+        </tr>
+        
+
+        <tr class="row">
+            <td align="center"  class="col" colspan="2" width:20%">
+               <strong> TRANSACTION ID:</strong>{{dd.twallet.ref_no}} </td>
+            <td align="center" class="col" colspan="2" width:20%">
+                <strong> DATE:</strong>  <br/> {{dd.twallet.xreg_date}}  </td>
+        </tr>
+        
+          <tr class="row" style="background-color:#1C5E55; color:#ffffff; text-align:center;font-weight:bold;">
+            <td class="col" align="center" colspan="4">
+               &nbsp;
+                </td>
+        </tr>
+            <tr class="row" style=" text-align:center;font-weight:bold;">
+            <td class="col" align="center" colspan="4">
+               &nbsp;
+                PAYMENT REFERENCE:&nbsp;  <br/> {{dd.isw_fields.pay_ref}}
+                </td>
+        </tr>
+        <tr class="row" style="background-color:#1C5E55; color:#ffffff; text-align:center;font-weight:bold;">
+            <td class="col" align="center" colspan="4">
+               &nbsp;
+                </td>
+        </tr>
+
+    </table>
+
+    <table ng-show=vshow class="center-align padding table-responsive"  style="font-size:16px;text-align:center;font-weight:normal;width:100%;border:1px solid #000000;">
+          <tr class="row">
+            <td class="col" align="center" colspan="2" style="background-color:#666; color:#ffffff;font-weight:bold;">
+                ---
+                APPLICANT</td>
+            <td class="col" align="center" colspan="2" style="background-color:#666; color:#ffffff;font-weight:bold;">
+                ---
+                AGENT</td>
+        </tr>
+        
+        <tr class="row">
+            <td align="left" class="col" > NAME:</td>
+            <td align="left" class="col"> {{dd.applicant.xname}} </td>
+            <td align="left" class="col">NAME:  </td>
+            <td align="left" class="col" style="padding:0px;"> {{Registration.Surname}} </td>
+        </tr>
+        
+        <tr  class="row"style="background-color:#E3EAEB;">
+            <td class="col" align="left">ADDRESS:</td>
+            <td class="col" align="left" style="padding:0px;">   {{dd.applicant.address}}  </td>
+            <td class="col" align="left"> CODE:</td>
+            <td class="col" align="left" style="padding:0px;"> {{Registration.Sys_ID}} </td>
+        </tr>
+        <tr class="row">
+            <td class="col" align="left"> E-MAIL:   </td>
+            <td class="col" align="left" style="padding:0px;"> {{dd.applicant.xemail}}</td>
+            <td class="col" align="left"> E-MAIL:</td>
+            <td class="col" align="left" style="padding:0px;"> {{Registration.Email}} </td>
+        </tr>
+        <tr class="row" style="background-color:#E3EAEB;">
+            <td class="col" align="left">MOBILE: </td>
+            <td class="col" align="left" style="padding:0px;"> {{dd.applicant.xmobile}}</td>
+            <td class="col" align="left" > MOBILE: </td>
+            <td class="col" align="left" style="padding:0px;"> {{Registration.PhoneNumber}} </td>
+        </tr>
+    </table>
+    <table ng-show=vshow class="center-align padding table-responsive"  style="font-size:16px;text-align:center;font-weight:normal;width:100%;border:1px solid #000000;">
+        <tr class="row">
+            <td class="col" align="center" colspan="4"  
+                style="background-color:#666; color:#ffffff;font-weight:bold;">
+                <strong>PAYMENT</strong></td>
+        </tr>
+         <tr class="row">
+            <td  class="col" align="center" colspan="2"  
+                style="font-weight:bold;">
+                PAYMENT STATUS: <br/> {{payment_status}}</td>
+            <td class="col" align="center" colspan="2"  
+                style="font-weight:bold;">
+                PAYMENT MODE:<br/> "Inter switch";</td>
+        </tr>
+
+        <tr class="row">
+            <td colspan="4" class="col" align="left">            
+                <table style="width:100%;" id="mitems" class="tiger-stripe" >
+                    <tr style="background-color:#1C5E55; color:#ffffff;">
+                       
+                       
+                        
+                          <td>DESCRIPTION</td>
+                        <td>
+                            QTY</td>
+                        <td style="text-align:center;"> APP. FEE(NGN)</td>
+                              <td style="text-align:center;"> TECH. FEE(NGN)</td>
+                        <td style="text-align:center;">
+                            TOTAL (NGN)</td>
+                    </tr>
+                   
+                    <tr ng-repeat="row in dd.feedetails" >
+                       
+                        
+                       
+                         <td>
+                         {{row.desc}} </td>
+                        <td>
+                        {{row.xqty}}   </td>
+
+                        <td align="right">
+                            {{row.init_amt|currency:""}}
+                        </td>
+
+                            <td align="right">
+                                 {{row.tech_amt|currency:""}}
+                        </td>
+
+                        <td align="right">
+                             {{row.tot_amt|currency:""}}
+                        </td>
+                    </tr>
+                     
+                   
+                   <tr>
+                        <td colspan="4" style="text-align:right;font-weight:bold;">
+                           Convenience Fee:&nbsp;</td>
+
+                        <td align="right">
+                            {{dd.isw_fields.isw_conv_fee|currency:""}}
+                            &nbsp;</td>
+                    </tr>  
+
+                     <tr>
+                        <td colspan="4" style="text-align:right;font-weight:bold;">
+                           TOTAL AMOUNT:&nbsp;</td>
+
+                        <td align="right">
+                           {{dd.total_amt}}
+                            &nbsp;</td>
+                    </tr>  
+                </table>
+            </td>
+        </tr>
+          
+           
+            
+         <tr class="row">
+                        <td class="center-align col" style="background-color:#1C5E55; color:#ffffff;" 
+                            colspan="5">&nbsp;</td>
+                    </tr>
+                  
+                    <tr class="row">
+                        <td class="center-align col" colspan="4" align="center">
+            POWERED BY<br/>
+           <img src="Images/payxlogo.jpg"  alt="XPay"  height="40px" /> <br />
+                Plot 4. Oluwakayode Jacobs Street Ikate,Lekki Phase 1<br />
+                <a href="http://www.einaosolutions.com">www.einaosolutions.com</a><br />
+                Support E-mail(s): <a href="mailto:paymentsupport@einaosolutions.com">paymentsupport@einaosolutions.com</a><br />
+                Customer Contact Support Line(s): +2349038979681 </td>
+                    </tr> 
+           
+          
+    </table>
+    </div>
+
+
+
+  </ion-content>
+</ion-view>
+
+

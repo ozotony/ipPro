@@ -1,0 +1,81 @@
+<ion-view >
+
+     
+
+  <ion-content class="padding has-header" > 
+     
+     <style>
+
+   textarea,select, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+
+    color: #C5C5C5;
+    background-color: #616161 ;
+
+    width:90% ;
+
+    margin-left: 10px;
+
+    margin-right: 10px;
+      
+    
+}
+
+ button .glyphicon {color:black !important;}
+
+    .btn-success {
+    color: black;
+    background-color: #06FBB5;
+    border-color: #06FBB5;
+     border:none !important;
+
+        box-shadow:none !important;
+}
+     .btn-success:active {
+    color: black;
+    background-color: #06FBB5;
+    border-color: #06FBB5;
+     border:none !important;
+
+        box-shadow:none !important;
+}
+   
+    .btn-success:hover {
+
+        background-color:#7F7F7F;
+        border-color:#7F7F7F;
+        text-shadow:none !important;
+
+       
+    }
+
+
+
+
+
+    #btn-signup {
+        background-color: #06FBB5;
+        cursor: pointer;
+    }
+
+  .icon2 {color:black !important; }
+
+</style>
+
+<br/>
+
+<br/>
+
+
+
+<select ng-model="Type2"  name="AccountType"  data-ng-options="item for item in items" required>
+                                            <option value="">-- Select Type --</option>
+</select>
+<br/>
+
+<br/>
+
+ <button id="btn-signup" ng-click="submitForm(Type2)" class="btn-success btn-lg center-block" style="font-weight:bold ;font-size:10px ;" type="submit">  Proceed &nbsp <i class="icon ion-arrow-right-a icon2"></i> </button>
+  </ion-content>
+  </ion-view >
+
+  

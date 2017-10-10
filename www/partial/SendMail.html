@@ -1,0 +1,63 @@
+<ion-view >
+    <ion-header class="bar bar-assertive bar-subheader">
+                <button class="button button-small " ng-click="dashboard()" >
+       <i class="ion-arrow-left-a"></i>
+          Back
+        </button>
+        <br/>
+<span style="margin-left: auto;
+    margin-right: auto;">
+        <strong  >CONTACT US</strong> </span> </ion-header>
+  <ion-content class="has-subheader"> 
+      <ion-scroll zooming="true" direction="y" class="theroot" >
+
+            
+  
+  <form name="myForm" novalidate>
+   <div class="list list-inset">
+
+                                    <label>
+                                        <input type="radio" name="chickenEgg" value="Complaints"  ng-model="myForm.chickenEgg">
+                                        Complaints
+                                       
+                                    </label>
+                                    &nbsp; &nbsp; 
+                                    <label>
+                                        <input type="radio" name="chickenEgg" value="Enquires"  ng-model="myForm.chickenEgg">
+                                        Enquires
+                                    </label>
+                                     <label>
+                                        <input type="radio" name="chickenEgg" value="Feedback"  ng-model="myForm.chickenEgg">
+                                       Feedback
+                                    </label>
+
+
+
+        
+
+          <label class="item item-input">
+     <textarea  id="address" name="address2" ng-model="myForm.address"  required  placeholder="MESSAGE" rows="7"></textarea>
+             
+          </label>
+
+         
+
+
+
+         
+
+          <span class="row">
+         
+           <button col id="btn-signup" type="button" ng-click="submitForm(myForm)" class="button  button-positive">Send</button>
+          </span>
+      </div>
+
+
+</form>
+
+
+</ion-scroll>
+  </ion-content>
+  </ion-view >
+
+  

@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+      <script src="js/winstore-jscompat.js"></script>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+<link href="css/swiper.min.css" rel="stylesheet">
+    
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+     <script src="lib/ionic/js/angular-ui/angular-ui-router.min.js"></script>
+   
+
+    <!-- cordova script (this will be a 404 during development) -->
+    
+    <script src="js/ng-cordova.min.js"></script>
+    <script src="cordova.js"></script>
+
+    <script src="js/jquery.js"></script>
+     <script src="js/swiper.min.js"></script>
+
+    
+
+         <link rel="stylesheet" href="css/swiper.min.css">
+
+    <script src="js/angular-swiper.js"></script>
+<script src="js/angular-local-storage.js"></script>
+     <script src="js/loading-bar.js"></script>
+    <link href="css/loading-bar.css" rel="stylesheet" />  
+
+<link href="css/bootstrap.min.css" rel="stylesheet" />  
+
+<link href="css/v-accordion.min.css" rel="stylesheet" />  
+
+
+
+
+    
+  <script src="js/sweet-alert.min.js"></script>
+
+    <script src="js/angular-animate.min.js"></script>
+
+  
+
+   <script src="js/smart-table.min.js"></script>
+
+   <script src="js/angular-messages.min.js"></script>
+
+ <script src="js/angular-datepicker.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+  <script src="js/ui-bootstrap-tpls-0.14.3.min.js"></script>
+
+  <script src="js/v-accordion.min.js"></script>
+
+
+
+
+
+ 
+
+
+
+   
+     <link href="css/sweet-alert.css" rel="stylesheet" /> 
+
+     <link href="css/ng-modal.css" rel="stylesheet" />
+    <script src="js/ng-modal.min.js"></script>
+<link href="css/nifty.modal.css" rel="stylesheet" /> 
+
+<link href="css/angular-datepicker.min.css" rel="stylesheet" />
+
+
+
+<!-- path to ionic/angularjs js -->
+
+
+<script src="js/moment.js"></script>
+<script src="js/angular-momentjs.min.js"></script>
+<script src="js/angular-sanitize.min.js"></script>
+
+
+
+
+
+
+    
+
+    <!-- your app's js -->
+  
+    <script src="js/app.js"></script>
+      <script src="js/GetData.js"></script>
+      <script src="js/LoginInterceptor.js"></script>
+      
+       <script src="js/CustomDirectives.js"></script>
+      
+    
+<script type="text/javascript">
+
+    spe = 500;
+    var na = document.getElementsByTagName("blink")
+   
+    swi = 1;
+    bringBackBlinky();
+
+    function bringBackBlinky() {
+
+        if (swi == 1) {
+            sho = "visible";
+            swi = 0;
+        }
+        else {
+            sho = "hidden";
+            swi = 1;
+        }
+
+        for (i = 0; i < na.length; i++) {
+            na[i].style.visibility = sho;
+        }
+
+        setTimeout("bringBackBlinky()", spe);
+    }
+
+</script>
+
+
+
+    
+  </head>
+  <body ng-app="starter" style="background-color:#3D3D3D"  >
+
+
+
+      
+       <ion-nav-view class="scroll-content ionic-scroll padding  has-footer " cache-view="false"  ></ion-nav-view>
+      
+
+  </body>
+</html>

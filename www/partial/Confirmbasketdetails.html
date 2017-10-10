@@ -1,0 +1,107 @@
+<ion-view >
+  <ion-header class="bar bar-assertive ">
+
+      <button class="button button-small " ng-click="dashboard()" >
+       <i class="ion-arrow-left-a"></i>
+          Back
+        </button>
+
+<h1 class="title"><span style="margin-left: auto;
+    margin-right: auto;" >CONFIRM DETAILS </span> </h1>
+
+  </ion-header>
+  <ion-content  >
+<br/>
+
+       <div class="col-md-12 " >
+
+           <div class="center-align" style="background-color:#1C5E55; color:#ffffff;text-align:center;">
+
+ <span style="text-align:center;" >ITEM DETAILS</span>
+           </div>
+
+             <div  class="center-align" style="text-align:center;">
+            <span  style="text-align:center;font-weight: bold;" > Product Title:</span>    
+            <span style="text-align:center;" > {{Details.product_title}} </span>    
+            </div> 
+
+              <div class="center-align" style="text-align:center;" >
+            <span  style="text-align:center;font-weight: bold;"> Item Code:</span>    
+            <span style="text-align:center;" > {{Details.item_code}}  </span>    
+            </div> 
+
+              <div class="center-align" style="text-align:center;" >
+            <span  style="text-align:center;font-weight: bold;"> Transaction ID: </span>    
+            <span style="text-align:center;" > {{Details.new_transID}}  </span>    
+            </div> 
+
+              <div class="center-align" style="text-align:center;" >
+            <span  style="text-align:center;font-weight: bold;"> Amount: </span>    
+            <span style="text-align:center;" > {{Details.init_amt|currency:""}}  </span>    
+            </div> 
+
+             <div  style="background-color:#1C5E55; color:#ffffff;text-align:center;">
+            <span style="text-align:center;" >APPLICANT DETAILS</span>
+        </div>
+
+        <div class="center-align" style="text-align:center;" >
+            <span  style="text-align:center;font-weight: bold;">Name: </span>    
+            <span style="text-align:center;"  > {{Details.xname}}</span>    
+            </div> 
+
+              <div class="center-align" style="text-align:center;" >
+            <span  style="text-align:center;font-weight: bold;">Address: </span>    
+            <span style="text-align:center;" > {{Details.address}}</span>    
+            </div> 
+
+             <div class="center-align" style="text-align:center;" >
+            <span  style="text-align:center;font-weight: bold;">E-mail :</span>    
+            <span style="text-align:center;"  > {{Details.xemail}}</span>    
+            </div>
+
+              <div class="center-align" style="text-align:center;" >
+            <span  style="text-align:center;font-weight: bold;">Phone Number:</span>    
+            <span style="text-align:center;" > {{Details.xmobile}}</span>    
+          </div> 
+
+
+            <div class="center-align" style="background-color:#1C5E55; color:#ffffff;text-align:center;">
+            <span style="text-align:center;"  >AGENT DETAILS</span>
+        </div>
+
+           <div class="center-align" style="text-align:center;" >
+            <span  style="text-align:center;font-weight: bold;">Name: </span>    
+            <span style="text-align:center;" > {{Registration.Surname}}</span>    
+            </div> 
+
+             <div class="center-align" style="text-align:center;" >
+            <span  style="text-align:center;font-weight: bold;">E-mail :</span>    
+            <span style="text-align:center;" >  {{Registration.Email}}</span>    
+            </div>
+
+                  <div class="center-align" style="text-align:center;" >
+            <span  style="text-align:center;font-weight: bold;">Phone Number:</span>    
+            <span style="text-align:center;" > {{Registration.PhoneNumber}}</span>    
+          </div> 
+
+           <div class="center-align" style="background-color:#1C5E55; color:#ffffff;">
+            <span ></span>
+        </div>
+
+  <div class="center-align" style="text-align:center;">
+
+         <button class="button btn-success  "   ng-click="dashboard2()" >
+       <i class="ion-document-text"></i>
+          File Application
+        </button>
+
+  </div>
+
+       </div>
+
+
+
+
+
+           </ion-content>
+</ion-view>

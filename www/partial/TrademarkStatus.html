@@ -1,0 +1,116 @@
+<ion-view >
+
+     
+
+  <ion-content  class="padding has-header" > 
+     
+     <style>
+
+   textarea,select, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+
+    color: #C5C5C5;
+    background-color: #616161 ;
+
+    width:90% ;
+
+    margin-left: 10px;
+
+    margin-right: 10px;
+      
+    
+}
+
+ button .glyphicon {color:black !important;}
+
+    .btn-success {
+    color: black;
+    background-color: #06FBB5;
+    border-color: #06FBB5;
+     border:none !important;
+
+        box-shadow:none !important;
+}
+     .btn-success:active {
+    color: black;
+    background-color: #06FBB5;
+    border-color: #06FBB5;
+     border:none !important;
+
+        box-shadow:none !important;
+}
+   
+    .btn-success:hover {
+
+        background-color:#7F7F7F;
+        border-color:#7F7F7F;
+        text-shadow:none !important;
+
+       
+    }
+
+
+
+
+
+    #btn-signup {
+        background-color: #06FBB5;
+        cursor: pointer;
+    }
+
+  .icon2 {color:black !important; }
+
+  input::-webkit-input-placeholder , textarea::-webkit-input-placeholder {
+       padding-left: 10px;
+    }
+
+
+</style>
+
+<br/>
+
+<br/>
+
+ <div style="background-color:#3D3D3D; color:white; text-align:center; font-weight:bold;width:100%">
+                <strong style="font-weight:bold">TRADEMARK STATUS INFORMATION</strong>
+            </div>
+
+            <br/>
+
+ <select  id="Getstatus" data-ng-options="c.Transaction_Status as c.Transaction_Status2 for c in varray44" name="status" ng-model="aa.Getstatus">
+                        <option value="">-- Select Search Criteria   --</option>
+                    </select>
+
+                    <br/>
+                    <br/>
+
+
+                    <input type="text" id="SelectedValue"  required name="txt_status" placeholder="Enter Value" ng-model="aa.SelectedValue">
+
+                    <br />
+                   &nbsp;&nbsp;
+                    <button id="Button3" type="submit" ng-click="Ddx3()" class="btn-success btn-lg">  Clear </button>
+
+                    <button id="Button3" type="submit" ng-click="Ddx(aa.Getstatus,aa.SelectedValue)" class="btn-success btn-lg">  Search  </button>
+
+                    <br/>
+
+
+                    
+     <div id="no-more-tables" class="col padding">
+
+         <div ng-show=vshow>
+ Dear
+                {{user.Surname}},
+
+                <br /> We will like to inform you that your application ("/OAI/TM/{{ dd.lt_pw[0].validationID}} is currently at the <strong>  {{dd.ppx.status}}  Office</strong><br />
+                Regards,
+
+             </div>
+            
+                       
+
+     </div>
+
+  </ion-content>
+
+</ion-view>

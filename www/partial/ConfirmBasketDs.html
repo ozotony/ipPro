@@ -1,0 +1,109 @@
+<ion-view >
+  <ion-header class="bar bar-assertive bar-subheader">
+
+      <button class="button button-small " ng-click="dashboard()" >
+       <i class="ion-arrow-left-a"></i>
+          Back
+        </button>
+
+<h1 class="title"><span style="margin-left: auto;
+    margin-right: auto;" >PLEASE CONFIRM THE DETAILS BELOW</span> </h1>
+
+  </ion-header>
+  <ion-content class="has-subheader" >
+
+<table class="table"  style="width:100%;">      
+
+        
+        <tr >
+            <td style="text-align:center;" colspan="2" >
+                <br />
+                </td>
+        </tr>      
+       
+         <tr class="center-align" style="background-color:#1C5E55; color:#ffffff;">
+            <td class="auto-style1" colspan="2">ITEM DETAILS</td>
+        </tr>
+         <tr >
+            <td  style="width:100px; background-color:#808080;"> Product Title:</td>    
+            <td > {{Details.product_title}} </td>    
+            </tr>      
+          <tr >
+            <td  style="width:100px; background-color:#808080;"> Item Code:</td>    
+            <td > {{Details.item_code}}  </td>    
+            </tr>  
+        <tr >
+            <td  style="width:100px; background-color:#808080;"> Transaction ID: </td>    
+            <td > {{Details.new_transID}}  </td>    
+            </tr> 
+    
+        <tr >
+            <td  style="width:100px; background-color:#808080;"> Amount: </td>    
+            <td > {{Details.init_amt|currency:""}}  </td>    
+            </tr> 
+        
+           <tr class="center-align" style="background-color:#1C5E55; color:#ffffff;">
+            <td class="center-align" colspan="2">APPLICANT DETAILS</td>
+        </tr>
+         
+        <tr >
+            <td  style="width:100px; background-color:#808080;">Name: </td>    
+            <td > {{Details.xname}}</td>    
+            </tr>  
+        <tr >
+            <td  style="width:100px; background-color:#808080;">Address: </td>    
+            <td > {{Details.address}}</td>    
+            </tr>  
+        <tr >
+            <td  style="width:100px; background-color:#808080;">E-mail :</td>    
+            <td > {{Details.xemail}}</td>    
+            </tr>
+         <tr >
+            <td  style="width:100px; background-color:#808080;">Phone Number:</td>    
+            <td > {{Details.xmobile}}</td>    
+          </tr> 
+         
+        
+           <tr class="center-align" style="background-color:#1C5E55; color:#ffffff;">
+            <td class="center-align" colspan="2">AGENT DETAILS</td>
+        </tr>
+         
+        
+          <tr >
+            <td  style="width:100px; background-color:#808080;">Name: </td>    
+            <td > {{Registration.Surname}}</td>    
+            </tr>  
+        
+        <tr >
+            <td  style="width:100px; background-color:#808080;">E-mail :</td>    
+            <td >  {{Registration.Email}}</td>    
+            </tr>
+         <tr >
+            <td  style="width:100px; background-color:#808080;">Phone Number:</td>    
+            <td > {{Registration.PhoneNumber}}</td>    
+          </tr> 
+        
+           <tr class="center-align" style="background-color:#1C5E55; color:#ffffff;">
+            <td class="center-align" colspan="2"></td>
+        </tr>
+               
+
+<tr>
+<td>
+
+</td>
+    <td >
+         <button class="button btn-success  "   ng-click="dashboard2()" >
+       <i class="ion-document-text"></i>
+          File Application
+        </button>
+
+    </td>
+
+</tr>
+
+
+          </table>
+
+           </ion-content>
+</ion-view>

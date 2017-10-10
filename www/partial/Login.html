@@ -1,0 +1,108 @@
+﻿<ion-view >
+
+    
+ 
+  <ion-content class="has-header" style="background-color:#3D3D3D">
+
+      <style>
+
+
+
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+
+
+    color: #C5C5C5;
+    background-color: #616161 ;
+
+    width:90% ;
+
+    margin-left: 10px;
+
+    margin-right: 10px;
+
+  
+    
+}
+
+
+ input::-webkit-input-placeholder{
+       padding-left: 10px;
+    }
+
+   
+input:-moz-placeholder { /* Firefox 18- */
+padding-left: 10px;
+
+
+
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+padding-left: 10px;
+
+
+}
+ 
+input:-ms-input-placeholder {  
+padding-left: 10px;
+
+
+
+}
+
+   #btn-signup {
+            background-color :#06FBB5;
+
+
+               
+              
+    cursor:pointer;
+}
+
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+
+
+          </style>
+        <div>
+
+
+<div >
+
+    <br/>
+    <br/>
+    <br/>
+        
+              <input type="text" class="item item-input " placeholder="Username" ng-model="vform.username">
+         
+          <br/>
+         
+              <input type="password" placeholder="Password" class="item item-input" ng-model="vform.password">
+         
+<br/>
+<br/>
+         
+   <div class="text-center">
+      <button id="btn-signup" ion-button large type="submit" ng-click="submitForm(vform)"  class="button  center "><i class="icon-hand-right"></i> &nbsp; &nbsp;&nbsp;&nbsp; login &nbsp; &nbsp;&nbsp;&nbsp;</button>
+   </div>
+      </div>
+         
+
+                        
+                       
+
+
+
+                    </div>
+
+
+            
+  
+  </ion-content>
+   </ion-view >
+

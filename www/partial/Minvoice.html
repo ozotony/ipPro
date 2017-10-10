@@ -1,0 +1,250 @@
+﻿<ion-view >
+
+  <ion-content class="padding has-header"  > 
+
+      <style>
+
+           button .glyphicon {
+        color: black !important;
+    }
+
+    .btn-success {
+        color: black;
+        background-color: #06FBB5;
+        border-color: #06FBB5;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+        .btn-success:active {
+            color: black;
+            background-color: #06FBB5;
+            border-color: #06FBB5;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+    .dds {
+        margin-left: 300px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .btn-success:hover {
+        background-color: #7F7F7F;
+        border-color: #7F7F7F;
+        text-shadow: none !important;
+    }
+
+          </style>
+
+        <div class="row center ">
+        <div class="col" >
+          
+                 <img src="img/Mobile-38.png" width="100%" class="img-responsive" />
+
+
+            </div>
+            </div>
+   
+
+    <br />
+       <div class="table-responsive "> 
+ <div class="col-md-12">
+     <div style="background-color:#1C5E55; color:#ffffff; text-align:center;font-weight:bold;border:1px solid #000000;"> 
+ PAYMENT INVOICE SLIP FOR TRANSACTION :&nbsp;{{twallet.ref_no}}
+     </div>
+
+     <div style="font-weight:normal;">
+This section displays your Payment Invoice Slip<br />
+                           
+                            <br />
+                            <div style="font-weight:bolder; font-size:16px; color:#f00; text-align:center"> PLEASE NOTE THAT THIS IS NOT A &quot;PAYMENT RECIEPT&quot; !!!</div><br />
+     </div>
+<div  style="background-color:#1C5E55; color:#ffffff; text-align:center;font-weight:bold;">
+
+</div>
+<div align="center"  style="background-color:#3D3D3D; color:#ffffff;font-weight:bold;">
+                       
+                       TRANSACTION REFERENCES
+                    </div>
+     <div style="font-weight:bold;">
+<strong> TRANSACTION ID:</strong> {{twallet.transID}} <br/>
+
+ <strong>TRANSACTION DATE:</strong>  {{twallet.xreg_date}}
+     </div>
+
+     <div style="background-color:#1C5E55; color:#ffffff; text-align:center;font-weight:bold;">
+
+     </div>
+
+      <div align="center"  style="background-color:#666; color:#ffffff;font-weight:bold;">
+                        ---
+                        APPLICANT INFORMATION ---
+                    </div>
+
+ <div >
+                    <span > <b> NAME: </b></span>
+                    <span > {{applicant.applicantname}}</span>
+                   
+                </div>
+
+                 <div  style="background-color:#E3EAEB;">
+                    <span ><b>ADDRESS:</b></span>
+                    <span > {{applicant.address}}</span>
+                    
+                </div>
+
+                
+                 <div >
+                    <span > <b> E-MAIL: </b>  </span>
+                    <span > {{applicant.email}}</span>
+                    
+                </div>
+
+                 <div  style="background-color:#E3EAEB;">
+                    <span ><b>MOBILE:</b> </span>
+                    <span >{{applicant.mobile}}</span>
+                   
+                </div>
+
+                 <div  align="center"  style="background-color:#666; color:#ffffff;font-weight:bold;">
+                        ---
+                        AGENT INFORMATION ---
+                    </div >
+
+                     <div >
+                  
+                    <span ><b> NAME:</b>  </span>
+
+                    <span  > {{agent.Surname}}</span>
+                </div >
+
+               
+
+                 <div  style="background-color:#E3EAEB;">
+                  
+                    <span  ><b> CODE: </b> </span>
+                    <span> {{agent.Sys_ID}}</span>
+                </div>
+               
+
+                 <div >
+                  
+                    <span ><b> E-MAIL: </b> </span>
+                    <span > {{agent.Email}}</span>
+                </div>
+               
+
+
+                <div  style="background-color:#E3EAEB;">
+                   
+                    <span > <b> MOBILE: <b> </span>
+
+                    <span >{{agent.PhoneNumber}}</span>
+                </div>
+
+                 <div align="center" 
+                        style="background-color:#666; color:#ffffff;font-weight:bold;">
+                        --- PAYMENT DETAILS ---
+                    </div>
+
+
+                  
+
+                 
+
+               
+
+     <div id="no-more-tables">
+            
+                        <table  class="col-md-12  table   cf"  st-table="displayedCollection" st-safe-src="ListAgent">
+                           <thead>
+                            <tr  style="background-color:#1C5E55; color:#ffffff;">
+                                
+                                <td >CODE</td>
+                                <td >ITEM DESCRIPTION</td>
+                                <td >
+                                    QTY
+                                </td>
+                                
+                                <td  style="text-align:center;">
+                                    AMOUNT (NGN)
+                                </td>
+                            </tr>
+                           </thead>
+                           <tbody>
+                            <tr  ng-repeat="row in displayedCollection">
+                               <td data-title="CODE">{{row.item_code}}</td>
+                                <td data-title="DESCRIPTION" >
+                                    {{row.item_desc}}
+
+                                </td>
+                                <td data-title="QUANTITY" >
+                                    {{row.qty}}
+                                </td>
+
+                                
+
+                                <td data-title="AMOUNT" >
+                                    {{(row.amt  )|currency:""}}
+
+                                </td>
+                            </tr>
+
+                            <tr>
+ <td data-title="TOTAL AMOUNT  " >
+                                   {{vTotal|currency:""}}
+
+                                </td>
+                                <tr>
+
+                           </tbody>
+
+
+                        </table>
+
+
+     </div>
+
+            
+
+ </div>
+       </div>
+            <table width="100%">
+                <tr class="row">
+                    <td class="col" style="text-align:center;">
+                                           
+                         <button ng-click="submitForm()" class="btn-success btn-lg btn-space" style="font-weight:bold ;font-size:10px ;" type="submit">  CheckOut &nbsp <i class="icon ion-arrow-right-c"></i> </button>
+                    </td>
+                </tr>
+            </table>
+
+            <form id="form2" action="https://sandbox.interswitchng.com/webpay/pay" method="post">
+        <input name="product_id" type="hidden" value="{{ vdata.product_id}}" />
+        <input name="pay_item_id" type="hidden" value="{{ vdata.pay_item_id}}" />
+        <input name="amount" type="hidden" value="{{InterSwitchPostFields.amount}}" />
+        <input name="currency" type="hidden" value="{{vdata.currency}}" />
+        <input name="site_redirect_url" type="hidden" value="{{vdata.site_redirect_url}}" />
+        <input name="txn_ref" type="hidden" value="{{twallet.transID}}" />
+        <input name="cust_name" type="hidden" value="{{applicant.applicantname}}" />
+        <input name="cust_name_desc" type="hidden" value="{{applicant.applicantname}}" />
+        <input name="cust_id" type="hidden" value="{{applicant.applicantname}}" />
+        <input name="cust_id_desc" type="hidden" value="{{applicant.applicantname}}" />
+        <input name="pay_item_name" type="hidden" value="{{applicant.applicantname}}" />
+        <input name="hash" type="hidden" value="{{InterSwitchPostFields.hash}}" />
+        <input name="payment_params" type="hidden" value="payment_split" />
+        <input name="xml_data" type="hidden" value='<payment_item_detail>
+            <item_details detail_ref="{{twallet.transID}}" institution="Einao Solutions" sub_location="Abuja" location="Lagos">
+                <item_detail item_id="1" item_name="Einao Solutions" item_amt="{{tech_amt}}" bank_id="120" acct_num="1771364037" />
+                <item_detail item_id="2" item_name="Federal Ministry Of Commerce" item_amt="{{init_amt}}" bank_id="120" acct_num="1770393883" />
+            </item_details>
+        </payment_item_detail>'/>
+        <br />
+
+
+
+    </form>
+</ion-content> 
+          </ion-view >
+  

@@ -1,0 +1,244 @@
+<ion-side-menus enable-menu-with-back-views="true" >
+
+  <ion-side-menu-content>
+    <style>
+.ion-navicon2{
+color:#06FBB5;
+}
+
+.icon2 {
+   color:black; 
+}
+
+.icon22 {
+   color:#06FBB5; 
+}
+
+
+ .bar2 {
+height: 60px;
+
+ }
+
+
+bar-footer {
+    
+    height: 100px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.bar.bar-assertive.bar-footer {
+   background-image:none;
+}
+
+.bar.bar-assertive {
+    border-color: #3D3D3D;
+    background-color: #3D3D3D;
+    background-image: none;
+    color: #fff;
+}
+
+.bar .title {
+  
+   margin-left:8px ;
+   
+    height: 70px;
+
+ 
+}
+
+.panel {
+   
+    background-color: #3D3D3D;;
+   
+}
+
+.list-group-item-success {
+    color: #3c763d;
+   background-color: #3D3D3D;;
+}
+
+.list-group-item {
+  
+    background-color: #616161;;
+    border: 1px solid #616161;
+    color:white ;
+}
+
+a.list-group-item-success, button.list-group-item-success {
+    color: white;
+}
+
+a.list-group-item, button.list-group-item {
+    color: white;
+}
+
+
+a.list-group-item-success:hover, button.list-group-item-success:hover, a.list-group-item-success:focus, button.list-group-item-success:focus {
+    color: white;;
+   
+}
+
+
+a.list-group-item:hover, button.list-group-item:hover, a.list-group-item:focus, button.list-group-item:focus {
+    text-decoration: none;
+    color: white;
+    background-color: #616161;
+}
+
+ .list-group-item {
+    background-color: #616161;
+    border: none;
+    color: white;
+}
+
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 0px solid transparent;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+      </style>
+
+   
+
+
+  <ion-nav-bar class="bar-assertive bar2 no-tap-scroll" align-title="center"  >
+
+     <ion-nav-back-button>
+    </ion-nav-back-button>
+
+ <ion-nav-buttons side="left"  >
+       <button class="button button-icon button-clear ion-navicon" 
+            menu-toggle="left">
+       </button>
+      </ion-nav-buttons>
+
+
+    
+
+      <ion-nav-title  >
+        
+      <span > <img src="Images/logo.png" height="30px"   > </img>  </span> 
+      <div class="pull-right" > 
+     
+       
+<span  ng-click="submitForm3()" ng-show=islogin style="color:#06FBB5;"> <i class="icon ion-bag icon22"></i> ({{vcount}})</span>
+
+ 
+      
+
+      </div>
+
+        
+
+    </ion-nav-title>
+
+
+
+    
+
+  </ion-nav-bar>
+
+
+
+
+
+
+
+
+
+
+    <ion-nav-view name="menuContent" animation="slide-left-right" style="background-color:#3D3D3D" >
+
+
+
+    </ion-nav-view>
+
+
+
+
+    <ion-footer-bar class="bar-assertive " style="background-color:#3D3D3D" align-title="center" >
+
+ 
+ <span    class="title"  > <img src="Images/logo2.png" height="30px"  > </img> </span>
+
+ 
+
+       </ion-footer-bar>
+    
+
+    
+
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left" style="background-color:#616161" >
+    
+<header class="bar bar-assertive" style="background-color:#616161">
+      <h1 class="title">Menu</h1>
+        
+    </header>
+   
+    <ion-content class="has-header" style="background-color:#616161">
+
+
+
+
+
+<div id="MainMenu">
+  <div class="list-group panel">
+   <a href="#/app" ng-show=islogin class="list-group-item list-group-item-success" change-background2 count2="3" ng-style="count2 == 3 ? {'background-color': '#3D3D3D'  } : { 'background-color': '#616161'}"  data-parent="#MainMenu"><img src="img/icons-02.png" width="20px" height="20px" style="vertical-align:bottom" /> <span style="vertical-align:bottom;font-size:11px">Mail</span></a>
+  <a href="#/app/Applicant" ng-show=islogin   class="list-group-item list-group-item-success"   change-background2 count2="32" ng-style="count2 == 32 ? {'background-color': '#3D3D3D' } : { 'background-color': '#616161'}" data-parent="#MainMenu" ><img src="img/icons-03.png" width="20px" height="20px" style="vertical-align:bottom;" /> <span style="vertical-align:bottom;font-size:11px">Make Payment</span></a> 
+  
+  <a href="#/app/ApplicationStatus" ng-show=islogin   class="list-group-item list-group-item-success"   change-background2 count2="13" ng-style="count2 == 13 ? {'background-color': '#3D3D3D' } : { 'background-color': '#616161'}" data-parent="#MainMenu" ><img src="img/icon_Status.png" width="20px" height="20px" style="vertical-align:bottom;" /> <span style="vertical-align:bottom;font-size:11px">Application Status</span></a> 
+
+  <a href="#/app/ApplicationStatus2" ng-show=islogin   class="list-group-item list-group-item-success"   change-background2 count2="10" ng-style="count2 == 10 ? {'background-color': '#3D3D3D' } : { 'background-color': '#616161'}" data-parent="#MainMenu" ><img src="img/icon_Purchases Report.png" width="20px" height="20px" style="vertical-align:bottom;" /> <span style="vertical-align:bottom;font-size:11px">Purchase Report</span></a> 
+  
+  <a href="#/app/ViewBasketTm" ng-show=islogin   class="list-group-item list-group-item-success"   change-background2 count2="10" ng-style="count2 == 10 ? {'background-color': '#3D3D3D' } : { 'background-color': '#616161'}" data-parent="#MainMenu" ><img src="img/icon_Purchases Report.png" width="20px" height="20px" style="vertical-align:bottom;" /> <span style="vertical-align:bottom;font-size:11px">File Trademark</span></a> 
+
+  <a href="#/app/logout" ng-show=islogin   class="list-group-item list-group-item-success"   change-background2 count2="83" ng-style="count2 == 83 ? {'background-color': '#3D3D3D' } : { 'background-color': '#616161'}" data-parent="#MainMenu" > &nbsp;<i class="icon ion-log-out icon22" width="20px" height="20px" style="vertical-align:bottom;" ></i> &nbsp; <span style="vertical-align:bottom;font-size:11px">LogOut</span></a> 
+ 
+     
+  
+  </div>
+</div>
+      
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
+
+ <script id="templates/modal2.html" type="text/ng-template">
+
+      <ion-modal-view>
+        <ion-header-bar class="bar-assertive bar2">
+          <h1 class="title">Item Summary</h1>
+          <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+        </ion-header-bar>
+
+        <ion-content class="padding has-subheader"  style="color:black;"  >
+        
+ 
+    
+   <div  style="margin-left: 30%;"> 
+ <div ng-bind-html="htmlPopover" class="center" style="margin-left: auto;margin-right: auto;display: block;color:black;">
+</div>
+    </div>
+
+
+ 
+
+
+
+      
+
+
+        </ion-content>
+      </ion-modal-view>
+    </script>

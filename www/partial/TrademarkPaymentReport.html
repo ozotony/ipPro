@@ -1,0 +1,374 @@
+<ion-view >
+
+     
+
+  <ion-content  class="padding has-header" > 
+     
+     <style>
+
+   textarea,select, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+
+    color: #C5C5C5;
+    background-color: #616161 ;
+
+    width:90% ;
+
+    margin-left: 10px;
+
+    margin-right: 10px;
+      
+    
+}
+
+ button .glyphicon {color:black !important;}
+
+    .btn-success {
+    color: black;
+    background-color: #06FBB5;
+    border-color: #06FBB5;
+     border:none !important;
+
+        box-shadow:none !important;
+}
+     .btn-success:active {
+    color: black;
+    background-color: #06FBB5;
+    border-color: #06FBB5;
+     border:none !important;
+
+        box-shadow:none !important;
+}
+   
+    .btn-success:hover {
+
+        background-color:#7F7F7F;
+        border-color:#7F7F7F;
+        text-shadow:none !important;
+
+       
+    }
+
+
+
+
+
+    #btn-signup {
+        background-color: #06FBB5;
+        cursor: pointer;
+    }
+
+  .icon2 {color:black !important; }
+
+</style>
+
+
+<script id="templates/modal2.html" type="text/ng-template">
+
+      <ion-modal-view>
+        <ion-header-bar class="bar-assertive bar2">
+          <h1 class="title">Payment Detail</h1>
+          <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+        </ion-header-bar>
+
+        <ion-content class="padding has-subheader"  style="color:black;"  >
+       <div class="row">
+
+                <div class="col-md-12">
+
+                    <div> <span style="font-weight:bold"> Transaction Id :  </span>{{data2.twallet.transID}} </div>
+
+                    <div> <span style="font-weight:bold"> Transaction Date :  </span>{{data2.twallet.xreg_date}} </div>
+
+                    <div> <span style="font-weight:bold"> Payment Reference :  </span>{{data2.InterSwitchPostField.pay_ref}} </div>
+
+
+
+                </div>
+            </div>
+
+            <br />
+
+            <div class="row">
+
+                <div class="col col-12" style="background-color:#3D3D3D ;color:white;height: 40px;">
+
+                    <div style="margin-top:15px"> <span style="font-weight:bold;padding-top:40px">Customer Details  </span> </div>
+
+
+
+                </div>
+            </div>
+
+            <br />
+
+            <table class="table">
+      
+
+                <tr>
+                    <td>
+
+                         <div class="row">
+
+                               <div class="col col-100" style="background-color:#3D3D3D ;color:white;height:40px">
+
+                                    <div style="margin-top:15px"><span style="font-weight:bold;padding-top:40px"> Applicant  Details </span> </div>
+
+
+
+                                </div>
+
+                         </div>
+
+                        <div class="row">
+
+                              
+
+
+                            <div >
+                         
+
+
+                                <div class="row">
+                                    <div class="divLast col col-12  "> <span style="font-weight:bold ;padding-left:8px;line-height:20px"> Full Name :  </span> <span style="line-height:20px"> {{data2.applicant.xname}} </span>   </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="divLast col col-12  "> <span style="font-weight:bold ;padding-left:8px;line-height:20px"> Address :  </span> <span style="line-height:20px"> {{data2.applicant.address}} </span> </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="divLast col col-12  "> <span style="font-weight:bold ;padding-left:8px;line-height:20px"> Email Address :  </span> <span style="line-height:20px"> {{data2.applicant.xemail}} </span> </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="divLast col col-12  "> <span style="font-weight:bold ;padding-left:8px;line-height:20px"> Phone Number :  </span> <span style="line-height:20px"> {{data2.applicant.xmobile}} </span> </div>
+                                </div>
+
+
+
+
+
+                            </div>
+                             </div>
+
+                             <div class="row">
+                         <div class="col col-12 " style="background-color:#3D3D3D ;color:white;height:40px">
+
+                                    <div style="margin-top:15px"><span style="font-weight:bold;padding-top:40px"> Agent  Details </span> </div>
+
+
+
+                                </div>
+
+                             </div>
+
+                     <div class="row">
+                        
+                            <div class="col-md-5 col-md-offset-2">
+                                 
+
+                                <div class="row">
+                                    <div class="divLast col col-12 "> <span style="font-weight:bold ;padding-left:8px;line-height:20px"> Full Name :  </span> <span style="line-height:20px"> {{agent.Surname}} </span> </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="divLast col col-12 "> <span style="font-weight:bold ;padding-left:8px;line-height:20px"> Code :  </span> <span style="line-height:20px"> {{agent.Sys_ID}} </span> </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="divLast col col-12 "> <span style="font-weight:bold ;padding-left:8px;line-height:20px"> Email Address :  </span> <span style="line-height:20px"> {{agent.Email}} </span> </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="divLast col col-12 "> <span style="font-weight:bold ;padding-left:8px;line-height:20px"> Phone Number :  </span> <span style="line-height:20px"> {{agent.PhoneNumber}} </span></div>
+                                </div>
+
+
+
+
+
+                            </div>
+
+                            </div>
+
+                       
+                    </td>
+
+                </tr>
+
+            </table>
+
+
+
+
+
+
+
+
+
+
+
+            <br />
+
+             <div class="row">
+                         <div class="col col-12 " style="background-color:#3D3D3D ;color:white;height:40px;margin-left:10px">
+
+                                    <div style="margin-top:15px"><span style="font-weight:bold;padding-top:40px"> Purchase Details </span> </div>
+
+
+
+                                </div>
+
+                             </div>
+
+            <div class="row">
+
+               
+            </div>
+
+            <br />
+
+           
+ <div id="no-more-tables">
+                <table class="col-md-12   table ">
+                    <thead class="cf">
+                        <tr>
+                            <th>SN</th>
+                           
+                            <th>ITEM DESCRIPTION</th>
+                            <th>Init Amount</th>
+                            <th>Tech  Amount</th>
+
+                            <th>QTY</th>
+                            <th>TOTAL (NGN)</th>
+
+
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+                        <tr ng-repeat="row in displayedCollection2">
+
+                            <td data-title="SN">{{$index + 1}}</td>
+                           
+                            <td data-title="DESCRIPTION">{{row.xdesc}}</td>
+                            <td data-title="Init Amount">{{row.init_amt|currency:""}}</td>
+                            <td data-title="Tech  Amount">{{row.tech_amt|currency:""}}</td>
+
+                            <td data-title="QUANTITY">{{row.xqty}}</td>
+
+                            <td data-title="AMOUNT">{{row.tot_amt|currency:""}}</td>
+                        </tr>
+
+                        <tr>
+                            
+                            <td data-title="Convenient Fee ">&nbsp;<strong>{{data2.InterSwitchPostField.isw_conv_fee|currency:""}}</strong></td>
+
+
+
+                        </tr>
+                        <tr>
+                           
+                            <td data-title="TOTAL">&nbsp;<strong>{{vTotal|currency:""}}</strong></td>
+
+
+
+                        </tr>
+
+                    </tbody>
+
+
+
+
+                </table>
+ 
+            </div>
+
+
+            <br />
+
+      
+
+
+        </ion-content>
+      </ion-modal-view>
+    </script>
+
+
+<br/>
+<div >
+ 
+         <div id="no-more-tables">
+             <input id="login-username" type="text"     name="username" required ng-model="firstname" style="margin-left:18px;" placeholder="Global Filter ">
+
+<br/>
+            
+                        <table  class="col-md-12  table   cf"  st-table="displayedCollection" st-safe-src="ListAgent">
+                           <thead>
+                            <tr  >
+                                
+                                <td >SN</td>
+                                <td >TRANSACTION ID</td>
+                                <td >
+                                   ITEM CODE
+                                </td>
+                                
+                                <td  >
+                                   ITEM DESCRIPTION
+                                </td>
+
+                                <td  >
+                                   PAYMENT DATE
+                                </td>
+
+                                 <td  >
+                                   DETAILS
+                                </td>
+                            </tr>
+                           </thead>
+                           <tbody>
+                            <tr  ng-repeat="row in displayedCollection | filter : firstname">
+                               <td data-title="SN">{{row.sn}}</td>
+                                <td data-title="TRANSACTIONID" >
+                                    {{row.newtransID}}
+
+                                </td>
+                                <td data-title=" ITEM CODE" >
+                                    {{row.item_code}}
+                                </td>
+
+                                
+
+                                <td data-title="ITEM DESCRIPTION" >
+                                    {{row.item_desc}}
+
+                                </td>
+
+                                  <td data-title="PAYMENT DATE" >
+                                    {{row.payment_date}}
+
+                                </td>
+
+                                <td data-title="DETAILS" >
+                                   <input type="radio" ng-value="false" name="vselect" ng-click=vchange(row) ng-model="select">
+
+                                </td>
+                            </tr>
+
+                           
+
+                           </tbody>
+
+
+                        </table>
+
+
+     </div>
+ 
+
+ 
+</div>
+  </ion-content>
+
+</ion-view>

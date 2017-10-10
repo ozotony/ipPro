@@ -1,0 +1,281 @@
+<ion-view >
+    <ion-header class="bar bar-assertive bar-subheader">
+                <button class="button button-small " ng-click="dashboard()" >
+       <i class="ion-arrow-left-a"></i>
+          Back
+        </button>
+<span style="margin-left: auto;
+    margin-right: auto;">
+        <strong  >APPLICANT INFORMATION FORM</strong> </span> </ion-header>
+  <ion-content class="has-subheader"> 
+      <ion-scroll zooming="true" direction="y" class="theroot" >
+   <table   class="inv"  style="margin-left: auto;
+    margin-right: auto;">
+       <tr>
+            <td colspan="2" style="text-align:center;">
+                <img alt="Coat Of Arms" height="79" src="Images/coat_of_arms.png" 
+                        width="85" /></td>
+        </tr>
+       
+        
+        <tr>
+            <td colspan="2"  style=" font-size:11pt;text-align:center;">
+                 FEDERAL REPUBLIC OF NIGERIA<br />
+                    FEDERAL MINISTRY OF INDUSTRY, TRADE AND INVESTMENT<br />
+                    COMMERCIAL LAW DEPARTMENT<br />
+                    TRADEMARKS, PATENTS AND DESIGNS REGISTRY<br />
+                     </td>
+        </tr>
+          <tr>
+            <td style="background-color:#1C5E55; color:#ffffff; text-align:center; font-weight:bold;" colspan="2"  >   </td>
+        </tr>
+       
+       <tr>
+            <td style="font-size:16pt;line-height:115%; text-align:center;" colspan="2">
+              TRADEMARK REGISTRATION ACKNOWLEDGEMENT FORM</td>
+        </tr>
+        
+        
+        <tr>
+            <td  style="width:50%; text-align:right;">
+                &nbsp;FILLING/APPLICATION DATE :             </td>
+            <td style="width:50%;">
+               
+                <span> {{Aknowlegment.markinfo.reg_date}} &nbsp; </span </td>
+        </tr>
+           <tr>
+            <td  style="text-align:center;">
+               REGISTRATION NUMBER : </td>
+            <td style="text-align:center;">
+              ONLINE APPLICATION ID :</td>
+        </tr>       
+       
+           <tr>
+            <td style="text-align:center;">
+             {{Aknowlegment.markinfo.reg_number}}   </td>
+            <td style="text-align:center;">
+           "OAI/TM/" {{Aknowlegment.stage.validationID}}   </td>
+        </tr>       
+       
+        <tr>
+            <td style="background-color:#1C5E55; color:#ffffff; text-align:center; font-weight:bold;" 
+                colspan="2">
+                --- APPLICANT INFORMATION ---</td>
+        </tr>
+        
+        <tr>
+            <td style="text-align:center;" colspan="2">
+                APPLICANT NAME:</td>
+        </tr>
+        
+        <tr>
+            <td style="text-align:center;" colspan="2">
+             {{Aknowlegment.applicant.applicantname}}       </td>
+        </tr>
+        
+      
+        
+        <tr>
+            <td style="text-align:center;" colspan="2">
+                ADDRESS :</td>                                
+        </tr>
+        
+        <tr>
+            <td style="text-align:center;" colspan="2">
+            {{Aknowlegment.applicant.address}}      </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align:center;">
+                PHONE NUMBER :
+            </td>
+                <td style="text-align:center;">
+                E-MAILS :
+                   </td>
+       </tr>
+        
+        <tr>
+            <td style="text-align:center;">
+          {{Aknowlegment.applicant.mobile}}       </td>
+                <td style="text-align:center;">
+            {{Aknowlegment.applicant.email}}         </td>
+       </tr>
+         
+        <tr>
+            <td colspan="2" 
+                style="background-color:#1C5E55; color:#ffffff; text-align:center; font-weight:bold;">
+                --- TRADEMARK INFORMATION --- </td>
+        </tr>
+          
+        <tr>
+            <td style="text-align:center;" colspan="2">
+                &nbsp;&nbsp;TRADEMARK :</td>
+        </tr>
+        
+        <tr>
+            <td style="text-align:center;" colspan="2">
+            {{Aknowlegment.markinfo.product_title}}    </td>
+        </tr>
+         <tr>
+            <td style="text-align:center;" colspan="2">
+                &nbsp;</td>                                
+        </tr>
+        <tr>
+            <td style="text-align:right;">
+                &nbsp;SPECIFICATION 
+                OF GOODS/SERVICES :
+            </td>
+            <td>
+                <span> {{Aknowlegment.markinfo.nice_class}} </span>
+                </td>
+        </tr>
+        <tr>
+            <td style="text-align:center;" colspan="2">
+                &nbsp;</td>                                
+        </tr>
+        <tr>
+            <td style="text-align:center;" colspan="2">
+                                &nbsp; SPECIFICATION OF GOODS/SERVICES DESCRIPTION : </td>
+            
+        </tr>
+        <tr>
+            <td style="text-align:center;" colspan="2"> 
+                <span> {{Aknowlegment.markinfo.nice_class_desc}} </span>
+                                
+                                </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align:center;" colspan="2"> 
+                                <strong>DISCLAIMER</strong></td>
+        </tr>
+        <tr>
+            <td style="text-align:center;" colspan="2"> 
+                 <span> {{Aknowlegment.markinfo.disclaimer}} </span>
+                                </td>
+        </tr>
+         
+        <tr>
+            <td style="background-color:#1C5E55; color:#ffffff; text-align:center; font-weight:bold;" 
+                colspan="2"> 
+                --- TRADEMARK REPRESENTATION --- </td>
+        </tr>
+          
+        <tr>
+            <td style="text-align:center;" colspan="2">   
+                <img class="img-thumbnail" ng-src="{{Aknowlegment.vurl}}">
+                
+
+                </td>
+        </tr>
+           
+        <tr>
+            <td colspan="2" 
+                style="background-color:#1C5E55; color:#ffffff; text-align:center; font-weight:bold;">
+                --- ATTORNEY INFORMATION ---
+            </td>
+        </tr>
+          
+         <tr>
+            <td style="text-align:center;">
+                ATTORNEY CODE : </td>
+            <td style="text-align:center;">
+               ATTORNEY NAME :
+               </td>
+        </tr>
+        
+         <tr>
+            <td style="text-align:center;">
+
+            {{Aknowlegment.representative.agent_code}}   </td>
+            <td style="text-align:center;">
+          {{Aknowlegment.representative.xname}}     </td>
+        </tr>
+        
+        <tr>
+            <td style="background-color:#1C5E55; color:#ffffff; text-align:center; font-weight:bold;" colspan="2">
+                &nbsp;ADDRESS :
+                </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align:center;" colspan="2">
+       {{Aknowlegment.Address.street}}     </td>
+        </tr>               
+        
+        <tr>
+            <td style="text-align:center;">
+                PHONE NUMBER : </td>
+            <td style="text-align:center;">
+                E-MAIL : 
+               </td>
+        </tr>
+
+        <tr>
+            <td style="text-align:center;">
+            {{Aknowlegment.Address.telephone1}}     </td>
+            <td style="text-align:center;">
+          {{Aknowlegment.Address.email1}}        </td>
+        </tr>
+           
+        <tr>
+            <td colspan="2" 
+                style="background-color:#1C5E55; color:#ffffff; text-align:center; font-weight:bold;">
+                --- PAYMENT INFORMATION ---
+            </td>
+        </tr>
+           <tr>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+         <tr>
+            <td style="text-align:center;">
+                TRANSACTION ID : </td>
+            <td style="text-align:center;">
+                
+               </td>
+        </tr>
+        
+         <tr>
+            <td style="text-align:center;">
+               
+          {{Aknowlegment.hwallet.transID}}      </td>
+            <td style="text-align:center;">
+               </td>
+        </tr>
+        
+        <tr>
+            <td style="background-color:#1C5E55; color:#ffffff; text-align:center; font-weight:bold;" 
+                colspan="2"  >              
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td  style="text-align:center;" colspan="2">
+             <strong>Your application has been received and is receiving due attention</strong><br />
+             <strong>REGISTRAR 
+                (COMMERCIAL LAW DEPARTMENT NIGERIA)</strong> <br /></td>
+        </tr>
+        
+       
+         
+        <tr>
+            <td  style="background-color:#1C5E55; color:#ffffff; text-align:center; font-weight:bold;" 
+                colspan="2" >
+              
+               </td>
+        </tr>       
+         
+        <tr>
+            <td  style="text-align:center;" colspan="2">              
+                <strong>PLEASE CONTACT AN ADMINSTRATOR AS SOON AS POSSIBLE</strong></td>
+        </tr>
+        
+      
+        
+    </table>
+
+
+</ion-scroll>
+  </ion-content>
+  </ion-view >
+
+  

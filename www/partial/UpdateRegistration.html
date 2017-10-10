@@ -1,0 +1,144 @@
+<ion-view >
+    <ion-header class="bar bar-assertive bar-subheader">
+        <button class="button button-small " ng-click="dashboard()" >
+       <i class="ion-arrow-left-a"></i>
+          Back
+        </button>
+      <img  ng-show=islogin class="img-rounded img-responsive"  height="80px" width="80px" style="border:0px;padding:0px;margin-right:3px" ng-src="{{vurl}}" />    
+        <strong style="margin-left: auto;
+    margin-right: auto;">ACCREDITATION AGENT FORM</strong></ion-header>
+  <ion-content class="has-subheader" > 
+      <ion-scroll zooming="true" direction="y" class="theroot" >
+
+<table  style="width:100%;" class="center-align" >
+    <td colspan="2" style="background-color: #006699;color:#fff;font-weight: bold;margin: 0 auto;height: 20px;padding: 0;">
+                    &nbsp;BIO-DATA OF PRINCIPAL PARTNER >>
+                    </td>
+            </tr>
+                        
+                            <tr >
+                               
+                                <td  >FIRST NAME:</td>
+                                 <td  ><input type="text" name="name2" required placeholder="NAME"  ng-model="Registration.Firstname"></td>
+                             
+                            </tr>
+
+                            <tr >
+                               
+                                <td  >SURNAME:</td>
+                                 <td  ><input type="text" name="surname2" required placeholder="surname"  ng-model="Registration.Surname"></td>
+                             
+                            </tr>
+
+                             <tr >
+                               
+                                <td  >E-MAIL:</td>
+                                 <td  ><input type="text" name="email2" required placeholder="email"  ng-model="Registration.Email"></td>
+                             
+                            </tr>
+
+                            <tr >
+                               
+                                <td >MOBILE NUMBER:</td>
+                                 <td  ><input type="text" name="mobile2" required placeholder="mobile"  ng-model="Registration.PhoneNumber"></td>
+                             
+                            </tr>
+
+                            <tr >
+                               
+                                <td >DATE OF BIRTH:</td>
+                                 <td  >
+                         <datepicker button-next="&lt;i class='glyphicon glyphicon-plus'&gt;&lt;/i&gt;" button-prev="&lt;i class='glyphicon glyphicon-minus'&gt;&lt;/i&gt;" date-format="yyyy-M-d">
+                                <input name="dob23" id="dob22"   required ng-model="Registration.DateOfBrith" type="text" />
+                            </datepicker>     
+                                     
+                     
+                             
+                            </tr>
+
+
+                            <tr>
+                <td colspan="2" style="background-color:gray;color:#fff;font-weight: bold;margin: 0 auto;height: 20px;padding: 0;">
+                    &nbsp;COMPANY INFORMATION >>
+                    </td>
+            </tr>
+
+             <tr >
+                               
+                                <td >NAME:</td>
+                                 <td  ><input type="text" name="cmpname2" required placeholder="cmpname"  ng-model="Registration.CompanyName"></td>
+                             
+                            </tr>
+
+
+                              <tr >
+                               
+                                <td >ADDRESS:</td>
+                                 <td  > <textarea  id="address" name="address2" ng-model="Registration.CompanyAddress"  required  placeholder="ADDRESS" rows="7"></textarea></td>
+                             
+                            </tr>
+
+                             <tr >
+                               
+                                <td >WEBSITE:</td>
+                                 <td  > <input type="text" name="website2" required placeholder="Website"  ng-model="Registration.CompanyWebsite"> </td>
+                             
+                            </tr>
+
+                             <tr >
+                               
+                                <td >DATE OF INCORPORATION:</td>
+                                 <td  >
+                                     
+                                      <datepicker button-next="&lt;i class='glyphicon glyphicon-plus'&gt;&lt;/i&gt;" button-prev="&lt;i class='glyphicon glyphicon-minus'&gt;&lt;/i&gt;" date-format="yyyy-M-d">
+                                <input name="doc2" id="doc2"   required ng-model="Registration.IncorporatedDate" type="text" />
+                            </datepicker>   
+                                    </td>
+                             
+                            </tr>
+
+
+ <tr>
+                <td colspan="2" style="background-color:gray;color:#fff;font-weight: bold;margin: 0 auto;height: 20px;padding: 0;">
+                    &nbsp;CONTACT INFORMATION  >>
+                    </td>
+            </tr>
+
+              <tr >
+                               
+                                <td >FULLNAME:</td>
+                                 <td  > <input type="text" name="fullname2" required placeholder="Fullname"  ng-model="Registration.ContactPerson"> </td>
+                             
+                            </tr>
+
+
+                             <tr >
+                               
+                                <td >MOBILE:</td>
+                                 <td  > <input type="text" name="mobile2" required placeholder="Mobile"  ng-model="Registration.ContactPersonPhone"> </td>
+                             
+                            </tr>
+
+
+                       
+  
+  <tr>
+
+      <td colspan="2">
+<button class="button button-block button-positive" ng-click="submitForm(Registration)">Update Application</button>
+      </td>
+
+  </tr>
+                       
+                       
+                    </table>
+
+            
+  
+  
+
+
+</ion-scroll>
+  </ion-content>
+  </ion-view >
+

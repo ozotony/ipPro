@@ -1,0 +1,221 @@
+﻿<ion-view >
+    
+  <ion-content class="padding has-header"  > 
+<style>
+    button .glyphicon {
+        color: black !important;
+    }
+
+    .btn-success {
+        color: black;
+        background-color: #06FBB5;
+        border-color: #06FBB5;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+        .btn-success:active {
+            color: black;
+            background-color: #06FBB5;
+            border-color: #06FBB5;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+    .dds {
+        margin-left: 300px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .btn-success:hover {
+        background-color: #7F7F7F;
+        border-color: #7F7F7F;
+        text-shadow: none !important;
+    }
+
+    .center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+</style>
+
+
+
+
+
+
+<script id="templates/modal2.html" type="text/ng-template">
+
+      <ion-modal-view>
+        <ion-header-bar class="bar-assertive bar2">
+          <h1 class="title">Terms And Agreement</h1>
+          <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+        </ion-header-bar>
+
+        <ion-content class="padding has-subheader"  style="color:black;"  >
+    <table  align="center" class="table">
+                    <tr>
+                        <td colspan="2">
+                            <table class="center-align table" >
+
+
+                                <tr>
+                                    <td class="center-align"
+                                        style="background-color:#1C5E55; color:#ffffff; font-size:16px;">
+                                        WEB PAYMENT GUIDE
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="left-align">
+                                        <span class="notice_header"> Step One:</span><br />
+                                        <span class="notice_text">You should have either an Interswitch powered Debit card or Verve card</span><br />
+                                        <br />
+                                        <span class="notice_header">Step Two:</span><br />
+                                        <span class="notice_text">Please ensure that the card provided is still valid (Check the expiry date!)</span><br />
+                                        <br />
+                                        <span class="notice_header">Step Three:</span><br />
+                                        <span class="notice_text">
+                                            Please ensure that you have the required amount (As shown on the details page!)
+                                            on the selected card type to pay for the required items
+                                        </span><br />
+                                        <br />
+                                        <span class="notice_header">Step Four:</span><br />
+                                        <span class="notice_text">
+                                            On the payment gateway, select the card type and provide the card details,PIN
+                                            and any other required information
+                                        </span><br />
+                                        <br />
+                                        <span class="notice_header">Step Five:</span><br />
+                                        <span class="notice_text">Always cross-check the details before you proceed to the payment gateway</span><br />
+                                        <br />
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center-align">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center-align"
+                                        style="background-color:#1C5E55; color:#ffffff;font-size:16px;">
+                                        BANK DEPOSIT PAYMENT GUIDE
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="center-align">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                           
+
+                                <tr>
+                                    <td class="left-align">
+                                        <span class="notice_header">Step One:</span><br />
+                                        <span class="notice_text">
+                                            Make sure you have either recieved an alert (SMS/E-mail) or have printed a copy
+                                            of your invoice
+                                        </span><br />
+                                        <br />
+                                        <span class="notice_header">Step Two:</span><br />
+                                        <span class="notice_text">Kindly go to any of the designated banks for the service to make payment</span><br />
+                                        <br />
+                                        <span class="notice_header">Step Three:</span><br />
+                                        <span class="notice_text">
+                                            Always cross-check the details before you proceed to generate the payment
+                                            invoice
+                                        </span><br />
+                                        <br />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="notice_footer">
+                                        Thank you for adhering to the above instructions!!
+                                    </td>
+                                </tr>
+                              
+
+                               
+
+
+
+
+
+
+
+
+
+
+
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+      
+
+
+        </ion-content>
+      </ion-modal-view>
+    </script>
+
+
+
+ <br/>
+   <div class="row center ">
+        <div class="col" >
+          
+                 <img src="img/Mobile-37.png" width="100%" class="img-responsive" />
+
+
+            </div>
+            </div>
+   
+
+    <br />
+
+  
+
+    
+
+       <ul>
+                <li  ng-repeat="row in displayedCollection2" type="item-text-wrap" style="margin-left:10px">
+         
+         <div class="col"> <span  style="font-weight:bold"> SN </span> <span >  &nbsp; {{$index + 1}} </span></div>
+          <div class="col"><span  style="font-weight:bold"> CODE </span> &nbsp; <span > {{row.item_code}}</span></div>
+          <div class="col"><span  style="font-weight:bold"> ITEM DESCRIPTION  </span > &nbsp; <span > {{row.item_desc}}</span></div>
+          <div class="col" ><span  style="font-weight:bold"> QTY  </span> &nbsp;<span > {{row.qty}}</span></div>
+         <div class="col" ><span  style="font-weight:bold"> TOTAL (NGN) </span > &nbsp;<span >{{row.amt|currency:""}}</span></div>
+         
+          
+         
+           <hr/>
+      </li>
+
+       <div class="col col-100" style="margin-left:10px" > <input type="checkbox"  ng-model="value2"   ng-change="getCheckedTrue(value2)" 
+                                     ng-true-value="'YES'" ng-false-value="'NO'"> <span style="margin-left:2px" ng-click="$event.stopPropagation()" >  <span ng-click="$event.stopPropagation()" >By checking and Clicking "Checkout" You Agree To Our </span> 
+                                     <br/>  <span ng-click="$event.stopPropagation()" style="font-weight:bold">    Terms,Conditions,Requirements </span> </span></div>
+
+      </ul>
+
+      <div class="row">
+        <div class="col">
+
+         
+            <!--<span style="margin-left:8px;">or</span>-->
+            <button ng-click="submitForm(value2)" class="btn-success btn-lg btn-space" style="font-weight:bold ;font-size:10px ;margin-left:10px" type="submit">  CheckOut &nbsp <i class="icon ion-arrow-right-c"></i> </button>
+        </div>
+      </div>
+       
+
+
+
+
+
+ </ion-content> 
+           </ion-view >
+ 

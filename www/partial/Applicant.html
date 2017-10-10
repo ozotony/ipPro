@@ -1,0 +1,199 @@
+﻿<ion-view >
+  <style>
+
+    button .glyphicon {color:black !important;}
+
+    .btn-success {
+    color: black;
+    background-color: #06FBB5;
+    border-color: #06FBB5;
+     border:none !important;
+
+        box-shadow:none !important;
+}
+     .btn-success:active {
+    color: black;
+    background-color: #06FBB5;
+    border-color: #06FBB5;
+     border:none !important;
+
+        box-shadow:none !important;
+}
+    .dds {
+
+      
+        font-size:12px;
+        font-weight:bold;
+    }
+    .btn-success:hover {
+
+        background-color:#7F7F7F;
+        border-color:#7F7F7F;
+        text-shadow:none !important;
+
+       
+    }
+
+
+
+
+
+        .form-control {
+        background-color: #939393;
+        color: white;
+    }
+
+    #btn-signup {
+        background-color: #06FBB5;
+        cursor: pointer;
+    }
+
+  .icon2 {color:black !important; }
+
+    #loginbox2 {
+        background-image: url('images/bbimage.png');
+        background-repeat:repeat-x;
+    }
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+
+    color: #C5C5C5;
+    background-color: #616161 ;
+
+    width:90% ;
+
+    margin-left: 10px;
+
+    margin-right: 10px;
+      
+    
+}
+
+input::-webkit-input-placeholder , textarea::-webkit-input-placeholder {
+       padding-left: 10px;
+    }
+
+
+
+</style>
+     
+
+  <ion-content class="has-header" > 
+     
+   
+<div  >
+<br/>
+      <div class="row center ">
+
+        <div class = "col" >
+           
+            <img src="img/Mobile-35.png" width="100%"  class="img-responsive" />
+
+
+        </div>
+    </div>
+
+    <br />
+
+
+   
+
+
+
+    <div>
+       
+        
+ <form id="signupform" name="userForm" novalidate >
+    
+
+       
+
+            <div >
+
+               
+
+                <input id="login-username" type="text"     name="username" required ng-model="ApplicantForm.firstname" placeholder="First Name">
+               
+       
+              
+
+            </div>
+
+ <br />
+            <div >
+               
+
+                <input id="login-username2" type="text"   name="username9" required ng-model="ApplicantForm.Lastname" placeholder="Last Name">
+
+            </div>
+
+
+
+        
+  
+
+    <br />
+
+
+        <div >
+
+            <div >
+              
+<textarea cols="4" rows="7" name="username22" required ng-model="ApplicantForm.Address" placeholder="Address"> </textarea>
+
+            </div>
+
+
+
+
+
+        </div>
+   
+
+    <br />
+   
+  
+
+            <div >
+                <input id="login-username10" type="email"  name="username10" required ng-model="ApplicantForm.Email" placeholder="Email Address">
+
+
+            </div>
+
+            <br/>
+
+
+            <div >
+
+                <input id="login-username11" type="tel"  name="username11" required ng-model="ApplicantForm.Phonenumber" placeholder="Phone Number">
+
+            </div>
+
+
+
+      
+   
+    <br />
+    <div >
+        <div>
+            <button id="btn-signup" ng-click="submitForm(userForm.$valid)" class="btn-success btn-lg center-block" style="font-weight:bold ;font-size:10px ;" type="submit">  Proceed &nbsp <i class="icon ion-arrow-right-a icon2"></i> </button>
+            <!--<span style="margin-left:8px;">or</span>-->
+        </div>
+
+    </div>
+    </form> 
+       
+</div>
+
+    </div>
+
+
+  </ion-content>
+  </ion-view >
+
+  
